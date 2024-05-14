@@ -160,7 +160,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               width: isDesktop ? 800 : isTablet ? 360 : isMobile ? 350 : 400,
               height: isDesktop ? 100 : isTablet ? 60 : isMobile ? 50 : 60,
               child: TextButton(onPressed: (){
-                Navigator.pushNamed(context, 'verifyCode');
+                Navigator.pushNamed(context, 'changePassword'); //verifyCode
               }, child: Text('Continue', style: TextStyle(fontFamily: 'RalewayBold', color: Colors.white)),),),
           ],
         ),
