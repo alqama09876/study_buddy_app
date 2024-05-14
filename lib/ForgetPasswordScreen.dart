@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ForgetPassword extends StatefulWidget {
   const ForgetPassword({super.key});
@@ -15,11 +14,9 @@ class _ForgetPasswordState extends State<ForgetPassword> {
     'assets/images/lock3.svg', // Repeat if needed
   ];
 
-  final String Screentext = "Let's Sign In";
-  final String text1 =
-      "Lorem Ipsum is simply the dummy text of the printing and";
+  final String Screentext = "Forget Password?";
+  final String text1 = "Lorem Ipsum is simply the dummy text of the printing and";
   final String text2 = "typesetting industry. Lorem Ipsum has been the";
-  final String DontHaveAcc = "Don't have an account?";
 
   TextEditingController emailController = TextEditingController();
 
@@ -86,20 +83,20 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             Center(
               child: Container(
                 width: isDesktop
-                    ? 350
+                    ? 300
                     : isTablet
-                        ? 250
+                        ? 200
                         : isMobile
-                            ? 150
-                            : 200,
+                            ? 100
+                            : 150,
                 // Adjust width based on device category
                 height: isDesktop
-                    ? 350
+                    ? 300
                     : isTablet
-                        ? 250
+                        ? 200
                         : isMobile
-                            ? 150
-                            : 200,
+                            ? 100
+                            : 150,
                 // Adjust height based on device category
                 child: arrImages.isNotEmpty
                     ? SvgPicture.asset(
@@ -114,13 +111,57 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             ),
             SizedBox(
               height: isDesktop
-                  ? 35
+                  ? 70
                   : isTablet
-                      ? 25
+                      ? 60
                       : isMobile
-                          ? 25
-                          : 30,
+                          ? 50
+                          : 60,
             ),
+            Text(Screentext, style: TextStyle(fontSize: 28, fontFamily: 'RalewayBold', fontWeight: FontWeight.bold, color: Color.fromARGB(255, 17, 24, 43))),
+            SizedBox(
+              height: isDesktop ? 20 : isTablet ? 15 : isMobile ? 10 : 15,
+            ),
+            Text(text1, style: TextStyle(fontSize: 13, fontFamily: 'RalewayRegular', color: Color.fromARGB(255, 174, 174, 174))), // grey
+            Text(text2, style: TextStyle(fontSize: 13, fontFamily: 'RalewayRegular', color: Color.fromARGB(255, 174, 174, 174))), // grey
+            SizedBox(
+              height: isDesktop ? 40 : isTablet ? 35 : isMobile ? 30 : 35,
+            ),
+            Container(
+              width: isDesktop ? 800 : isTablet ? 360 : isMobile ? 350 : 400,
+              height: isDesktop ? 100 : isTablet ? 60 : isMobile ? 50 : 60,
+              child: TextField(
+                controller: emailController,
+                textAlign: TextAlign.justify,
+                decoration: InputDecoration(
+                  hintText: "Email Address/Phone Number",
+                  suffixIcon: Icon(Icons.email_outlined),
+                  suffixIconColor: Color.fromARGB(255, 17, 24, 43),
+                  hintStyle: TextStyle(fontFamily: "RalewayRegular"),
+                  hoverColor: Color.fromARGB(255, 17, 24, 43),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      // color: Color.fromARGB(255, 174, 174, 174),
+                      color: Color.fromARGB(255, 228, 235, 253),
+                    ),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: isDesktop ? 40 : isTablet ? 35 : isMobile ? 30 : 35,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 1, 86, 211),
+                borderRadius: BorderRadius.circular(30),
+              ),
+              width: isDesktop ? 800 : isTablet ? 360 : isMobile ? 350 : 400,
+              height: isDesktop ? 100 : isTablet ? 60 : isMobile ? 50 : 60,
+              child: TextButton(onPressed: (){
+                Navigator.pushNamed(context, 'verifyCode');
+              }, child: Text('Continue', style: TextStyle(fontFamily: 'RalewayBold', color: Colors.white)),),),
           ],
         ),
       ),
