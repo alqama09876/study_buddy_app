@@ -8,8 +8,10 @@ class VerifyCode extends StatefulWidget {
 }
 
 class _VerifyCodeState extends State<VerifyCode> {
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+    );
   }
 }

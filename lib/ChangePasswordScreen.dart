@@ -10,12 +10,13 @@ class ChangePassword extends StatefulWidget {
 
 class _ChangePasswordState extends State<ChangePassword> {
   final List<String> arrImages = [
-    'assets/images/login.svg', // Change to the path of cap.svg
-    'assets/images/login.svg', // Repeat if needed
+    'assets/images/login3.svg', // Change to the path of cap.svg
+    'assets/images/login3.svg', // Repeat if needed
   ];
 
   final String Screentext = "New Password";
-  final String text1 = "Lorem Ipsum is simply the dummy text of the printing and";
+  final String text1 =
+      "Lorem Ipsum is simply the dummy text of the printing and";
   final String text2 = "typesetting industry. Lorem Ipsum";
 
   TextEditingController passwordController = TextEditingController();
@@ -48,61 +49,95 @@ class _ChangePasswordState extends State<ChangePassword> {
                 width: isDesktop
                     ? 400
                     : isTablet
-                    ? 300
-                    : isMobile
-                    ? 200
-                    : 250,
+                        ? 300
+                        : isMobile
+                            ? 200
+                            : 250,
                 // Adjust width based on device category
                 height: isDesktop
                     ? 400
                     : isTablet
-                    ? 300
-                    : isMobile
-                    ? 200
-                    : 250,
+                        ? 300
+                        : isMobile
+                            ? 200
+                            : 250,
                 // Adjust height based on device category
                 child: arrImages.isNotEmpty
                     ? SvgPicture.asset(
-                  arrImages[
-                  0], // Placeholder image in case arrImages is empty
-                  fit: BoxFit.contain,
-                )
+                        arrImages[
+                            0], // Placeholder image in case arrImages is empty
+                        fit: BoxFit.contain,
+                      )
                     : Container(
-                  color: Colors.amber,
-                ),
+                        color: Colors.amber,
+                      ),
               ),
             ),
             SizedBox(
               height: isDesktop
-                  ? 35
+                  ? 70
                   : isTablet
-                  ? 25
-                  : isMobile
-                  ? 25
-                  : 30,
+                      ? 65
+                      : isMobile
+                          ? 60
+                          : 65,
             ),
+            Text(Screentext,
+                style: TextStyle(
+                    fontSize: 28,
+                    fontFamily: 'RalewayBold',
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 17, 24, 43))),
             SizedBox(
-              height: isDesktop ? 40 : isTablet ? 35 : isMobile ? 30 : 35,
+              height: isDesktop
+                  ? 20
+                  : isTablet
+                      ? 15
+                      : isMobile
+                          ? 10
+                          : 15,
             ),
-            Text(Screentext, style: TextStyle(fontSize: 28, fontFamily: 'RalewayBold', fontWeight: FontWeight.bold, color: Color.fromARGB(255, 17, 24, 43))),
+            Text(text1,
+                style: TextStyle(
+                    fontSize: 13,
+                    fontFamily: 'RalewayRegular',
+                    color: Color.fromARGB(255, 174, 174, 174))), // grey
+            Text(text2,
+                style: TextStyle(
+                    fontSize: 13,
+                    fontFamily: 'RalewayRegular',
+                    color: Color.fromARGB(255, 174, 174, 174))), // grey
             SizedBox(
-              height: isDesktop ? 20 : isTablet ? 15 : isMobile ? 10 : 15,
-            ),
-            Text(text1, style: TextStyle(fontSize: 13, fontFamily: 'RalewayRegular', color: Color.fromARGB(255, 174, 174, 174))), // grey
-            Text(text2, style: TextStyle(fontSize: 13, fontFamily: 'RalewayRegular', color: Color.fromARGB(255, 174, 174, 174))), // grey
-            SizedBox(
-              height: isDesktop ? 40 : isTablet ? 35 : isMobile ? 30 : 35,
+              height: isDesktop
+                  ? 40
+                  : isTablet
+                      ? 35
+                      : isMobile
+                          ? 30
+                          : 35,
             ),
             Container(
-              width: isDesktop ? 800 : isTablet ? 360 : isMobile ? 350 : 400,
-              height: isDesktop ? 100 : isTablet ? 60 : isMobile ? 50 : 60,
+              width: isDesktop
+                  ? 800
+                  : isTablet
+                      ? 360
+                      : isMobile
+                          ? 350
+                          : 400,
+              height: isDesktop
+                  ? 100
+                  : isTablet
+                      ? 60
+                      : isMobile
+                          ? 50
+                          : 60,
               child: TextField(
                 obscureText: true,
                 controller: passwordController,
                 textAlign: TextAlign.justify,
                 decoration: InputDecoration(
                   hintText: "Password",
-                  suffixIcon: Icon(Icons.email_outlined),
+                  suffixIcon: Icon(Icons.remove_red_eye_outlined),
                   suffixIconColor: Color.fromARGB(255, 17, 24, 43),
                   hintStyle: TextStyle(fontFamily: "RalewayRegular"),
                   hoverColor: Color.fromARGB(255, 17, 24, 43),
@@ -117,11 +152,29 @@ class _ChangePasswordState extends State<ChangePassword> {
               ),
             ),
             SizedBox(
-              height: isDesktop ? 30 : isTablet ? 25 : isMobile ? 20 : 25,
+              height: isDesktop
+                  ? 30
+                  : isTablet
+                      ? 25
+                      : isMobile
+                          ? 20
+                          : 25,
             ),
             Container(
-              width: isDesktop ? 800 : isTablet ? 360 : isMobile ? 350 : 400,
-              height: isDesktop ? 100 : isTablet ? 60 : isMobile ? 50 : 60,
+              width: isDesktop
+                  ? 800
+                  : isTablet
+                      ? 360
+                      : isMobile
+                          ? 350
+                          : 400,
+              height: isDesktop
+                  ? 100
+                  : isTablet
+                      ? 60
+                      : isMobile
+                          ? 50
+                          : 60,
               child: TextField(
                 obscureText: true,
                 controller: confirmPasswordController,
@@ -143,18 +196,42 @@ class _ChangePasswordState extends State<ChangePassword> {
               ),
             ),
             SizedBox(
-              height: isDesktop ? 30 : isTablet ? 25 : isMobile ? 20 : 25,
+              height: isDesktop
+                  ? 30
+                  : isTablet
+                      ? 25
+                      : isMobile
+                          ? 20
+                          : 25,
             ),
             Container(
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 1, 86, 211),
                 borderRadius: BorderRadius.circular(30),
               ),
-              width: isDesktop ? 800 : isTablet ? 360 : isMobile ? 350 : 400,
-              height: isDesktop ? 100 : isTablet ? 60 : isMobile ? 50 : 60,
-              child: TextButton(onPressed: (){
-                Navigator.pushNamed(context, 'verifyCode');
-              }, child: Text('Continue', style: TextStyle(fontFamily: 'RalewayBold', color: Colors.white)),),),
+              width: isDesktop
+                  ? 800
+                  : isTablet
+                      ? 360
+                      : isMobile
+                          ? 350
+                          : 400,
+              height: isDesktop
+                  ? 100
+                  : isTablet
+                      ? 60
+                      : isMobile
+                          ? 50
+                          : 60,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'successfulScreen');
+                },
+                child: Text('Continue',
+                    style: TextStyle(
+                        fontFamily: 'RalewayBold', color: Colors.white)),
+              ),
+            ),
           ],
         ),
       ),
