@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:study_buddy_app/ForgetPasswordScreen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -138,7 +139,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     "Remember me", style: TextStyle(fontFamily: "RalewayBold", color: Color.fromARGB(255, 17, 24, 43)),
                   ),),
                   Spacer(),
-                  TextButton(onPressed: (){}, child: Text(
+                  TextButton(onPressed: (){
+                    Navigator.pushNamed(context, 'forgetPassword');
+                  }, child: Text(
                     "Forget Password ?", style: TextStyle(fontFamily: "RalewayBold", color: Color.fromARGB(255, 17, 24, 43)),
                   ),),
                 ],
