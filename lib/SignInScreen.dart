@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:study_buddy_app/ForgetPasswordScreen.dart';
 
+import 'Reusable_widgets/colors.dart';
+
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
 
@@ -37,7 +39,7 @@ class _SignInScreenState extends State<SignInScreen> {
     final bool isTablet = screenWidth >= 600 && screenHeight >= 600 && screenWidth < 1024 && screenHeight < 1024; // Screen width between 600 and 1024 pixels
     final bool isDesktop = screenWidth >= 1024 && screenHeight >= 1024; // Screen width greater than or equal to 1024 pixels
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: MyColor.white,
       body: Padding(
         padding: const EdgeInsets.all(13.0),
         child: Column(
@@ -60,7 +62,7 @@ class _SignInScreenState extends State<SignInScreen> {
             SizedBox(
               height: isDesktop ? 35 : isTablet ? 25 : isMobile ? 25 : 30,
             ),
-            Text(Screentext, style: TextStyle(fontSize: 28, fontFamily: 'RalewayBold', fontWeight: FontWeight.bold, color: Color.fromARGB(255, 17, 24, 43))),
+            Text(Screentext, style: TextStyle(fontSize: 28, fontFamily: 'RalewayBold', fontWeight: FontWeight.bold, color: MyColor.darkBlue)),
             SizedBox(
               height: isDesktop ? 20 : isTablet ? 15 : isMobile ? 10 : 15,
             ),
@@ -78,13 +80,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 decoration: InputDecoration(
                   hintText: "Email Address/Phone Number",
                   suffixIcon: Icon(Icons.email_outlined),
-                  suffixIconColor: Color.fromARGB(255, 17, 24, 43),
+                  suffixIconColor: MyColor.darkBlue,
                   hintStyle: TextStyle(fontFamily: "RalewayRegular"),
-                  hoverColor: Color.fromARGB(255, 17, 24, 43),
+                  hoverColor: MyColor.darkBlue,
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
                       // color: Color.fromARGB(255, 174, 174, 174),
-                      color: Color.fromARGB(255, 228, 235, 253),
+                      color: MyColor.lightGrey,
                     ),
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -104,14 +106,14 @@ class _SignInScreenState extends State<SignInScreen> {
                 decoration: InputDecoration(
                   hintText: "Password",
                   suffixIcon: Icon(Icons.lock_open_rounded),
-                  suffixIconColor: Color.fromARGB(255, 17, 24, 43),
+                  suffixIconColor: MyColor.darkBlue,
                   hintStyle: TextStyle(fontFamily: "RalewayRegular"),
                   // hoverColor: Color.fromARGB(255, 17, 24, 43),
-                  hoverColor: Color.fromARGB(255, 17, 24, 43),
+                  hoverColor: MyColor.darkBlue,
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
                       // color: Color.fromARGB(255, 174, 174, 174),
-                      color: Color.fromARGB(255, 228, 235, 253),
+                      color: MyColor.lightGrey,
                     ),
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -136,13 +138,13 @@ class _SignInScreenState extends State<SignInScreen> {
                   }
                   ),
                   TextButton(onPressed: (){}, child: Text(
-                    "Remember me", style: TextStyle(fontFamily: "RalewayBold", color: Color.fromARGB(255, 17, 24, 43)),
+                    "Remember me", style: TextStyle(fontFamily: "RalewayBold", color: MyColor.darkBlue),
                   ),),
                   Spacer(),
                   TextButton(onPressed: (){
                     Navigator.pushNamed(context, 'forgetPassword');
                   }, child: Text(
-                    "Forget Password ?", style: TextStyle(fontFamily: "RalewayBold", color: Color.fromARGB(255, 17, 24, 43)),
+                    "Forget Password ?", style: TextStyle(fontFamily: "RalewayBold", color: MyColor.darkBlue),
                   ),),
                 ],
               ),
@@ -152,14 +154,14 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             Container(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 1, 86, 211),
+                color: MyColor.blue,
                 borderRadius: BorderRadius.circular(30),
               ),
               width: isDesktop ? 800 : isTablet ? 360 : isMobile ? 350 : 400,
               height: isDesktop ? 100 : isTablet ? 60 : isMobile ? 50 : 60,
               child: TextButton(onPressed: (){
                 Navigator.pushNamed(context, 'onBoard3');
-              }, child: Text('Log In', style: TextStyle(fontFamily: 'RalewayBold', color: Colors.white)),),),
+              }, child: Text('Log In', style: TextStyle(fontFamily: 'RalewayBold', color: MyColor.white)),),),
             SizedBox(
               height: isDesktop ? 40 : isTablet ? 35 : isMobile ? 25 : 30,
             ),
@@ -171,13 +173,13 @@ class _SignInScreenState extends State<SignInScreen> {
                   Container(
                     height: 2,
                     width: isDesktop ? 220 : isTablet ? 160 : isMobile ? 120 : 140,
-                    color: Color.fromARGB(255, 1, 86, 211),
+                    color: MyColor.blue,
                   ),
-                  Text("Or Login With", style: TextStyle(fontSize: 13, fontFamily: "RalewayBold", color: Color.fromARGB(255, 1, 86, 211)),),
+                  Text("Or Login With", style: TextStyle(fontSize: 13, fontFamily: "RalewayBold", color: MyColor.blue),),
                   Container(
                     height: 2,
                     width: isDesktop ? 220 : isTablet ? 160 : isMobile ? 120 : 140,
-                    color: Color.fromARGB(255, 1, 86, 211),
+                    color: MyColor.blue,
                   ),
                 ],
               ),
@@ -194,7 +196,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     width: isDesktop ? 350 : isTablet ? 280 : isMobile ? 150 : 200,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      border: Border.all(color: Color.fromARGB(255, 1, 86, 211)),
+                      border: Border.all(color: MyColor.blue),
                     ),
                     padding: EdgeInsets.all(10), // Add padding for spacing between icon and text
                     child: Row(
@@ -202,14 +204,14 @@ class _SignInScreenState extends State<SignInScreen> {
                       children: [
                         FaIcon(
                           FontAwesomeIcons.facebook,
-                          color: Color.fromARGB(255, 1, 86, 211),
+                          color: MyColor.blue,
                         ),
                         SizedBox(width: 10), // Add some space between icon and text
                         Text(
                           'Facebook',
                           style: TextStyle(
                             fontFamily: "RalewayBold",
-                            color: Color.fromARGB(255, 1, 86, 211),
+                            color: MyColor.blue,
                             fontSize: 16, // Adjust font size as needed
                           ),
                         ),
@@ -220,7 +222,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     width: isDesktop ? 350 : isTablet ? 280 : isMobile ? 150 : 200,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      border: Border.all(color: Color.fromARGB(255, 1, 86, 211)),
+                      border: Border.all(color: MyColor.blue),
                     ),
                     padding: EdgeInsets.all(10), // Add padding for spacing between icon and text
                     child: Row(
@@ -228,14 +230,14 @@ class _SignInScreenState extends State<SignInScreen> {
                       children: [
                         FaIcon(
                           FontAwesomeIcons.google,
-                          color: Color.fromARGB(255, 1, 86, 211),
+                          color: MyColor.blue,
                         ),
                         SizedBox(width: 10), // Add some space between icon and text
                         Text(
                           'Google',
                           style: TextStyle(
                             fontFamily: "RalewayBold",
-                            color: Color.fromARGB(255, 1, 86, 211),
+                            color: MyColor.blue,
                             fontSize: 16, // Adjust font size as needed
                           ),
                         ),
@@ -251,10 +253,10 @@ class _SignInScreenState extends State<SignInScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(DontHaveAcc, style: TextStyle(fontSize: 15, fontFamily: "RalewayRegular", color: Color.fromARGB(255, 58, 58, 58)),),
+                Text(DontHaveAcc, style: TextStyle(fontSize: 15, fontFamily: "RalewayRegular", color: MyColor.darkGrey),),
                 TextButton(onPressed: (){
                   Navigator.pushNamed(context, 'signup');
-                }, child: Text("Sign up", style: TextStyle(fontSize: 15, fontFamily: "RalewayBold", color: Color.fromARGB(255, 17, 24, 43)),),),
+                }, child: Text("Sign up", style: TextStyle(fontSize: 15, fontFamily: "RalewayBold", color: MyColor.darkBlue),),),
               ],
             ),
           ],

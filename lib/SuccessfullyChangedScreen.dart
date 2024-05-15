@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'Reusable_widgets/colors.dart';
+
 class SuccessfulScreen extends StatefulWidget {
   const SuccessfulScreen({super.key});
 
@@ -83,7 +85,7 @@ class _SuccessfulScreenState extends State<SuccessfulScreen> {
                     fontSize: 28,
                     fontFamily: 'RalewayBold',
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 17, 24, 43))),
+                    color: MyColor.darkBlue)),
             SizedBox(
               height: isDesktop
                   ? 20
@@ -119,7 +121,7 @@ class _SuccessfulScreenState extends State<SuccessfulScreen> {
             ),
             Container(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 1, 86, 211),
+                color: MyColor.blue,
                 borderRadius: BorderRadius.circular(30),
               ),
               width: isDesktop
@@ -142,7 +144,7 @@ class _SuccessfulScreenState extends State<SuccessfulScreen> {
                 },
                 child: Text('Login',
                     style: TextStyle(
-                        fontFamily: 'RalewayBold', color: Colors.white)),
+                        fontFamily: 'RalewayBold', color: MyColor.white)),
               ),
             ),
           ],

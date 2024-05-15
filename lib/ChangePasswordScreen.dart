@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'Reusable_widgets/colors.dart';
+
 class ChangePassword extends StatefulWidget {
   const ChangePassword({super.key});
 
@@ -38,7 +40,7 @@ class _ChangePasswordState extends State<ChangePassword> {
         screenHeight >=
             1024; // Screen width greater than or equal to 1024 pixels
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: MyColor.white,
       body: Padding(
         padding: const EdgeInsets.all(13.0),
         child: Column(
@@ -87,7 +89,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                     fontSize: 28,
                     fontFamily: 'RalewayBold',
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 17, 24, 43))),
+                    color: MyColor.darkBlue)),
             SizedBox(
               height: isDesktop
                   ? 20
@@ -138,13 +140,13 @@ class _ChangePasswordState extends State<ChangePassword> {
                 decoration: InputDecoration(
                   hintText: "Password",
                   suffixIcon: Icon(Icons.remove_red_eye_outlined),
-                  suffixIconColor: Color.fromARGB(255, 17, 24, 43),
+                  suffixIconColor: MyColor.darkBlue,
                   hintStyle: TextStyle(fontFamily: "RalewayRegular"),
-                  hoverColor: Color.fromARGB(255, 17, 24, 43),
+                  hoverColor: MyColor.darkBlue,
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
                       // color: Color.fromARGB(255, 174, 174, 174),
-                      color: Color.fromARGB(255, 228, 235, 253),
+                      color: MyColor.lightGrey,
                     ),
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -182,13 +184,13 @@ class _ChangePasswordState extends State<ChangePassword> {
                 decoration: InputDecoration(
                   hintText: "Re-Enter Your New Password",
                   suffixIcon: Icon(Icons.remove_red_eye_outlined),
-                  suffixIconColor: Color.fromARGB(255, 17, 24, 43),
+                  suffixIconColor: MyColor.darkBlue,
                   hintStyle: TextStyle(fontFamily: "RalewayRegular"),
-                  hoverColor: Color.fromARGB(255, 17, 24, 43),
+                  hoverColor: MyColor.darkBlue,
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
                       // color: Color.fromARGB(255, 174, 174, 174),
-                      color: Color.fromARGB(255, 228, 235, 253),
+                      color: MyColor.lightGrey,
                     ),
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -206,7 +208,7 @@ class _ChangePasswordState extends State<ChangePassword> {
             ),
             Container(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 1, 86, 211),
+                color: MyColor.blue,
                 borderRadius: BorderRadius.circular(30),
               ),
               width: isDesktop
@@ -229,7 +231,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                 },
                 child: Text('Continue',
                     style: TextStyle(
-                        fontFamily: 'RalewayBold', color: Colors.white)),
+                        fontFamily: 'RalewayBold', color: MyColor.white)),
               ),
             ),
           ],

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'Reusable_widgets/colors.dart';
+
 class ForgetPassword extends StatefulWidget {
   const ForgetPassword({super.key});
 
@@ -36,7 +38,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
         screenHeight >=
             1024; // Screen width greater than or equal to 1024 pixels
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: MyColor.white,
       body: Padding(
         padding: const EdgeInsets.all(13.0),
         child: Column(
@@ -118,7 +120,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                           ? 50
                           : 60,
             ),
-            Text(Screentext, style: TextStyle(fontSize: 28, fontFamily: 'RalewayBold', fontWeight: FontWeight.bold, color: Color.fromARGB(255, 17, 24, 43))),
+            Text(Screentext, style: TextStyle(fontSize: 28, fontFamily: 'RalewayBold', fontWeight: FontWeight.bold, color: MyColor.darkBlue)),
             SizedBox(
               height: isDesktop ? 20 : isTablet ? 15 : isMobile ? 10 : 15,
             ),
@@ -136,13 +138,13 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 decoration: InputDecoration(
                   hintText: "Email Address/Phone Number",
                   suffixIcon: Icon(Icons.email_outlined),
-                  suffixIconColor: Color.fromARGB(255, 17, 24, 43),
+                  suffixIconColor: MyColor.darkBlue,
                   hintStyle: TextStyle(fontFamily: "RalewayRegular"),
-                  hoverColor: Color.fromARGB(255, 17, 24, 43),
+                  hoverColor: MyColor.darkBlue,
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
                       // color: Color.fromARGB(255, 174, 174, 174),
-                      color: Color.fromARGB(255, 228, 235, 253),
+                      color: MyColor.lightGrey,
                     ),
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -154,14 +156,14 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             ),
             Container(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 1, 86, 211),
+                color: MyColor.blue,
                 borderRadius: BorderRadius.circular(30),
               ),
               width: isDesktop ? 800 : isTablet ? 360 : isMobile ? 350 : 400,
               height: isDesktop ? 100 : isTablet ? 60 : isMobile ? 50 : 60,
               child: TextButton(onPressed: (){
                 Navigator.pushNamed(context, 'changePassword'); //verifyCode
-              }, child: Text('Continue', style: TextStyle(fontFamily: 'RalewayBold', color: Colors.white)),),),
+              }, child: Text('Continue', style: TextStyle(fontFamily: 'RalewayBold', color: MyColor.white)),),),
           ],
         ),
       ),
