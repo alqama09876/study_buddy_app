@@ -16,7 +16,7 @@ void main() {
   runApp(
     new MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: VerifyCode(),
       routes: {
         'splashSreen': (context) => SplashScreen(),
         'onBoard1' : (context) => OnBoard1(),
